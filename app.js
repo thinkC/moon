@@ -27,7 +27,8 @@ app.use(flash());
 app.use(methodOverride("_method"));
 
 
-mongoose.connect("mongodb://localhost/t4solutionsnewa");
+//mongoose.connect("mongodb://localhost/t4solutionsnewa");
+mongoose.connect("mongodb://lion:winners01234.@ds155218.mlab.com:55218/tforsolutions");
 
 //PASSPORT CONFIGURATION
 app.use(require("express-session")({

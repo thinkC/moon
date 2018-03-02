@@ -8,17 +8,6 @@ var nodemailer = require("nodemailer");
 var crypto = require("crypto");
 
 
-//middleware
-function allowRegister(req, res, next){
-    if(req.isAuthenticated() && req.user._id == "5a93c16ab8016d0c30e0a883"){
-        return next();
-    }
-    req.flash("error", "Please login First");
-    res.redirect("/login");
-}
-
-
-
 //root route
 router.get("/", function(req,res) {
     console.log(req.user);
@@ -374,6 +363,13 @@ router.post('/reset/:token', function(req, res) {
   });
 });
 
-
+//middleware
+function allowRegister(req, res, next){
+    if(req.isAuthenticated() && req.user._id == "5a99b940f4dea027831887dd"){
+        return next();
+    }
+    req.flash("error", "Please login First");
+    res.redirect("/login");
+}
 
 module.exports = router;
