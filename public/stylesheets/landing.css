@@ -8,7 +8,7 @@ body, html{
     /*color: #665;*/
 }
 .nav .navbar-nav{
-    color:#fff ;
+    color:black !important;
 }
 
 .pimg1{
@@ -19,7 +19,7 @@ body, html{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-     background-attachment: fixed;
+    background-attachment: fixed;
  
 }
 

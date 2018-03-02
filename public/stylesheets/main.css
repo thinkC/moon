@@ -2,7 +2,11 @@
 /*    background: #000;*/
 /*}*/
 
-
+.navbar-inverse{
+  background-color: #96A9BA;
+  border:none;
+  
+}
 
 /*--------Contact-----------------*/
 .containerContact{

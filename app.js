@@ -26,9 +26,8 @@ app.use(express.static(__dirname + "/public"));
 app.use(flash());
 app.use(methodOverride("_method"));
 
-
-//mongoose.connect("mongodb://localhost/t4solutionsnewa");
-mongoose.connect("mongodb://lion:winners01234.@ds155218.mlab.com:55218/tforsolutions");
+var url = process.env.DATABASEURL || "mongodb://localhost/t4solutionsnewa";
+mongoose.connect(url);
 
 //PASSPORT CONFIGURATION
 app.use(require("express-session")({
@@ -194,7 +193,8 @@ function allowRegister(req, res, next){
     res.redirect("/");
 }
 
-console.log(process.env.GMAILPW);
+//console.log(process.env.GMAILPW);
+console.log(process.env.DATABASEURL);
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("transport app server started...");
 })
