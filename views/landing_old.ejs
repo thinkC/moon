@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>T4 Solutions</title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/landing.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Oxygen:400,700" rel="stylesheet">
+        <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700" rel="stylesheet">-->
+        <!--<script src="https://use.fontawesome.com/8a181522cb.js"></script>-->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        
+    </head>
+    <body>
+ <div class="container">
+     <!--<div id="top">-->
+     <!--    <h2 class="text-center">Tunde Oyewo</h2>-->
+     <!--    <p class="text-center">Developer-In-Training</p>-->
+     <!--</div>   -->
+<nav class="navbar navbar-default navbar-fixed-top ">
+    <div class="container-fluid">
+        <div id="mago" class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">Menu
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <!--<a class="navbar-brand" id="menu" href="/">Aquarium</a>-->
+            <a class="navbar-brand" id="menu" href="/">T4Solutions</a>
+        </div>
+    <div class="collapse navbar-collapse" id="collapsable-nav">
+        <ul class="nav navbar-nav" >
+            <li><a style="color:white" href="/">HOME</a></li>
+            <li><a href="/about">ABOUT</a></li>
+            <li><a href="/contact">CONTACT</a></li>
+            </ul>
+       <ul class="nav navbar-nav navbar-right">
+           <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+           <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+           <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+           <% if(!currentUser){ %>
+           <li><a href="/login">Login</a> </li>
+           <li><a href="/Register">Sign Up</a></li>
+           <% } else { %>
+           <li><a href="#">Signed In As <%=currentUser.username%></a></li>
+           <li><a href="/logout">Logout</a> </li>
+           
+            <% } %>
+       </ul>
+    </div>
+    </div>
+</nav>
+
+</div>
+<div class="container">
+<div class="row">
+   <div class="col-md-9">
+       <div class="slider">
+ <!--   <img src="./images/1.jpg" alt="" class="active">-->
+	<!--<img src="./images/2.jpg" alt="">-->
+	<img src="./images/3.jpg"  alt="" class="active">
+	<img src="./images/4.jpg"  alt="">
+</div>
+   </div> 
+   <div class="col-md-3">
+       <div class="quote-container">
+	<i class="pin"></i>
+	<blockquote class="note yellow">
+		For Partnership, please click <a href="#">here</a>
+		<!-- <cite class="author">Curabitur</cite> -->
+	</blockquote>
+</div>
+   </div>
+</div>
+<div class="row">
+   <div class="col-xs-12" id="moveeasy" >
+<h1><span id="move">“MoveEasy” </span> and be safe continue working and maintain good health <br>MoveEasy and be convenient and be comfortable</h1>
+
+<p>MoveEasy with us just for N500 from Mainland to the Island<br><span><a href="/signup" class="btn btn-success btn-lg registerbtn">Register Now!</a></p>
+<!--<div class="b1"><a href="/signup" class="btn btn-success btn-lg registerbtn">Register Now!</a></div>-->
+</div> 
+</div>
+<div class="row">
+   <div class="col-md-4" id="mid">
+       <h3>- Register -</h3>
+       <span><a><i class="far fa-dot-circle"></i></a></span>
+       
+   </div>
+   <div class="col-md-4">
+       <h3>- About Us -</h3>
+      <span><a><i class="fas fa-camera-retro"></i></a></span>
+       
+   </div>
+   <div class="col-md-4">
+       <h3>- Contact -</h3>
+       <span><a><i class="fas fa-envelope"></i></a></span>
+        
+   </div>
+</div>
+</div>
+<% include ./partials/footer %>

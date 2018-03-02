@@ -1,0 +1,46 @@
+<% include partials/header %>
+<!--<div class="container contact">-->
+<!--<img class="img-responsive" src="https://mrorca.org.au/wp-content/uploads/2016/08/UnderConstruction.png">-->
+<!--</div>-->
+
+<div class="containerContact">
+    <div class="wrapper animated bounceInLeft">
+      <div class="company-info" style="margin-top:60px;">
+        <ul class="ulContact">
+          <li><i class="fa fa-road"></i> 44 Something st</li>
+          <li><i class="fa fa-phone"></i> (555) 555-5555</li>
+          <li><i class="fa fa-envelope"></i> test@tundeoyewo.test</li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h3 style="margin-top:60px;">Email Us</h3>
+        
+        <form action="/contact" method="POST">
+          <p>
+            <label>Name</label>
+            <input type="text" name="name">
+          </p>
+          <p>
+            <label>Company</label>
+            <input type="text" name="company">
+          </p>
+          <p>
+            <label>Email Address</label>
+            <input type="email" name="email">
+          </p>
+          <p>
+            <label>Phone Number</label>
+            <input type="text" name="phone">
+          </p>
+          <p class="full">
+            <label>Message</label>
+            <textarea name="message" rows="5"></textarea>
+          </p>
+          <p class="full">
+            <button type="submit">Submit</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+<% include partials/footer %>

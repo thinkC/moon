@@ -1,0 +1,19 @@
+<% include ./partials/header %>
+<div class="container">
+<h1 class="text-center" style="margin-top:80px;">Login Page</h1>
+<div style="width : 30%; margin:25px auto">
+<form action="/login" method="POST">
+    <div class="form-group">
+    <input class="form-control" type="text" name="username" id="username" pattern="[a-z]{4,15}" title="username should only contain lowercase letters and minimum of 4 character. e.g. john" placeholder="username">
+    </div>
+    <div class="form-group">
+    <input class="form-control" type="password" name="password" placeholder="password">
+    </div>
+    <div class="form-group">
+    <input class="form-control btn btn-lg btn-primary btn-block" type="submit" value="Login">
+    </div>
+</form>
+<p>Forgot password? <a href="https://t4solutions-thinkc.c9users.io/forgot">Reset it</a></p>
+</div>
+</div>
+<% include ./partials/footer %>

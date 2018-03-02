@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>T4 Solutions</title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/landing.css">
+        <link rel="stylesheet" href="/stylesheets/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Oxygen:400,700" rel="stylesheet">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+        
+    </head>
+    <body>
+ <div class="container">
+<nav class="navbar navbar-inverse navbar-fixed-top " id="test">
+    <div class="container-fluid">
+        <div id="mago" class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">Menu
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <!--<a class="navbar-brand" id="menu" href="/">Aquarium</a>-->
+            <a class="navbar-brand" id="menu" href="/">T4Solutions</a>
+        </div>
+    <div class="collapse navbar-collapse" id="collapsable-nav">
+        <ul class="nav navbar-nav" >
+            <li><a style="color:#fff" href="/">HOME</a></li>
+            <li><a  href="/about">ABOUT</a></li>
+            <li><a href="/blog">BLOG</a></li>
+            <li><a href="/contact">CONTACT</a></li>
+            </ul>
+       <ul class="nav navbar-nav navbar-right">
+          <% if(currentUser && currentUser._id == "5a93c16ab8016d0c30e0a883"){ %>
+           <li><a href="/registeredusers">Users</a></li>
+          <% } %>
+           <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+           <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+           <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+           <% if(!currentUser){ %>
+           <li><a href="/login">Login</a> </li>
+           <li><a href="/Register">Sign Up</a></li>
+           <% } else { %>
+           <li><a href="#">Signed In As <%=currentUser.username%></a></li>
+           <li><a href="/logout">Logout</a> </li>
+           
+            <% } %>
+       </ul>
+    </div>
+    </div>
+</nav>
+
+<div class="container">
+    <% if(error && error.length){ %>
+   <div class="alert alert-danger">
+      <%=error %>
+   </div>
+
+<% } %>
+   <% if(success && success.length){ %>
+       <div class="alert alert-success">
+      <%=success %>
+   </div> 
+   <% } %>
+   
+</div>
+
+
+</div>

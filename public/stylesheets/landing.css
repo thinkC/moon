@@ -1,0 +1,150 @@
+body, html{
+    height: 100%;
+    /*margin:0;*/
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /*line-height: 1.8em;*/
+    /*color: #665;*/
+}
+.nav .navbar-nav{
+    color:#fff ;
+}
+
+.pimg1{
+    background-image: url("../images/image1.jpeg");
+    min-height: 100%;
+    position: relative;
+    /*opacity: 0.70;*/
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+     background-attachment: fixed;
+ 
+}
+
+.section{
+    text-align: center;
+    padding: 50px 80px;
+}
+.ptext1{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    
+    /*text-transform: uppercase;*/
+}
+.ptext2 .border1.trans{
+    background-color: transparent;
+}
+
+div > .ptext2{
+    position: absolute;
+    bottom: 400px;
+    width: 100%;
+    text-align: left;
+    margin-top:  150px;
+    margin-left:  125px;
+    font-size: 20px;
+    letter-spacing: 8px;
+    
+    /*text-transform: uppercase;*/
+}
+.ptext1 .border{
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+    
+}
+.ptext2 .border1{
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+a span{
+    text-decoration: none;
+}
+
+#removLine{
+    text-decoration: none;
+}
+#removLine1{
+    text-decoration: none;
+}
+#removLine2{
+    text-decoration: none;
+}
+.pimg1 p{
+    margin-top: 60px;
+    color: #fff;
+    letter-spacing: normal;
+    font-family: 'Oxygen', sans-serif;
+}
+/*.ptext{*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    width: 100%;*/
+/*    text-align: center;*/
+/*    color: #000;*/
+/*    font-size: 27px;*/
+/*    letter-spacing: 8px;*/
+/*    text-transform: uppercase;*/
+/*}*/
+
+.section-light{
+    background-color: #f4f4f4;
+    color: #665;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+.section-light p{
+     font-family: 'Oxygen', sans-serif;
+     font-size: 22px;
+}
+.info-left{
+    padding: 35px;
+    font-size: 20px;
+}
+.info-right{
+    padding: 40px;
+     font-size: 20px;
+}
+#contact{
+    margin-top: 50px;
+    /*background-color: 	#1B1811;*/
+    /*background-image: url("../images/4.jpg");*/
+    background-repeat: no-repeat;
+    color: #fff;
+    
+}
+
+footer{
+    margin-bottom: 30px;
+    
+}
+footer p{
+    margin-top: 10px;
+}
+footer span{
+    padding-right: 15px;
+    padding-left: 10px;
+}
+
+/*@media(max-width:568px){*/
+/*    .pimg1, .pimg2, .pimg3{*/
+/*        background-attachment: scroll;*/
+/*    } */
+/*}*/
+
+@media(max-width:568px){
+    .ptext2{
+        display:none;
+    }
+    #test{
+        display: inline;
+    }
+}

@@ -1,0 +1,21 @@
+<% include ./partials/header %>
+<div class="container">
+<h1 style="text-align: center;  margin-top:60px;">Registered Users</h1>
+<!--<%= allRegisteredUsersVar %>-->
+<% for(var i=0; i < allRegisteredUsersVar.length; i++){ %>
+    <h4><%= allRegisteredUsersVar[i]["firstName"]%> - <%= allRegisteredUsersVar[i]["lastName"] %></h4>
+    <h4><%= allRegisteredUsersVar[i]["username"]%></h4>
+    <h4><%= allRegisteredUsersVar[i]["email"]%></h4>
+    <h4><%= allRegisteredUsersVar[i]["phone"]%></h4>
+    <h4><%= allRegisteredUsersVar[i]["gender"]%></h4>
+     <h4><%= allRegisteredUsersVar[i]["locations"]%></h4>
+       <h4><%= allRegisteredUsersVar[i]["bus_stop"]%></h4>
+       <h4><%= allRegisteredUsersVar[i]["pickupTime"]%></h4>
+       <h4><%= allRegisteredUsersVar[i]["comment"]%></h4>
+        <p>
+        <a href="/register/<%=allRegisteredUsersVar[i]._id%>" class="btn btn-primary">More Info</a>
+    </p>
+       <hr>
+<% } %>
+</div>
+<% include ./partials/footer %>

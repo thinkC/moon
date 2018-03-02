@@ -1,0 +1,21 @@
+<% include ./partials/header %>
+<div class="container" style="margin-top:70px;">
+<!--<%= foundUsersVar%>-->
+         
+     <h4><%= foundUsersVar["firstName"]%> - <%= foundUsersVar["lastName"] %></h4>
+     <h4><%= foundUsersVar["username"]%></h4>
+     <h4><%= foundUsersVar["email"]%></h4>
+    <h4><%= foundUsersVar["phone"]%></h4>
+    <h4><%= foundUsersVar["gender"]%></h4>
+     <h4><%= foundUsersVar["locations"]%></h4>
+       <h4><%= foundUsersVar["bus_stop"]%></h4>
+       <h4><%= foundUsersVar["pickupTime"]%></h4>
+       <h4><%= foundUsersVar["comment"]%></h4>
+       <a class="btn btn-warning btn-xs" href="/register/<%=foundUsersVar._id%>/edit">Edit</a>
+       <form style="display: inline" action="/register/<%= foundUsersVar._id %>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger btn-xs">Delete</button>
+                </form>
+
+</div>
+<% include ./partials/footer %>
+

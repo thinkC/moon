@@ -1,0 +1,207 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+/*body{*/
+    /*background: url("https://images.unsplash.com/photo-1477519242566-6ae87c31d212?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9&s=e76df28410a31345dfb8268407b48d80") no-repeat center center fixed;*/
+/*    background: url("https://images.unsplash.com/photo-1500828921686-fb56856d8580?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9&s=76600f9b88be0cb1ebc5dcd3e24585f0") no-repeat center center fixed;*/
+/*    -webkit-background-size: cover;*/
+/*    -moz-background-size: cover;*/
+/*    -o-background-size: cover;*/
+/*    background-size: cover; */
+/*}*/
+.navbar-default{
+    background: #fff;
+    border:0;
+    
+}
+h1{
+    color : #000;
+    text-align: center;
+    margin-top: 100px;
+    font-family: 'Oxygen', sans-serif;
+}
+p{
+    color: #000;
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 20px;
+}
+#move{
+    color: #4F9D47;
+}
+.b1{
+    width: 200px;
+    /*margin-left: 500px;*/
+    margin: 0 auto;
+}
+
+.copyright{
+    margin-top: 50px;
+    padding-top: 150px;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%; /* the magic */
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  /*margin: 0 auto 40px;*/
+}
+.foot{
+    text-align: center;
+}
+#socialA{
+    border-radius: 50%;
+    background-color: #CD5C5C;
+    width: 50px;
+    /*margin-bottom: 5px;*/
+    /*margin-top: 250px;*/
+}
+#socialB{
+    border-radius: 50%;
+    background-color: #CD5C5C;
+    width: 50px;
+    /*margin-bottom: 5px;*/
+    /*margin-top: 250px;*/
+}
+/* Slider */
+/*.slider{*/
+/*	width: 200px;*/
+/*	height: 200px;*/
+/*	position: relative;*/
+/*}*/
+.slider{
+	width: 50%;
+	height: 50%;
+	position: relative;
+}
+img{
+	max-width: 700px;
+	max-height: 700px;
+	position: absolute;
+	opacity: 0;
+	transition: 1s;
+	margin-top: 100px;
+}
+
+.active{
+	opacity: 1;
+}
+/* fontawesome icons */
+.fa-dot-circle{
+    font-size: 5em;
+    color: #000;
+}
+.fa-envelope{
+    font-size: 5em;
+    color: #000;
+}
+.fa-camera-retro{
+   font-size: 5em;
+   color: #000;
+}
+/* fontawesome icons  end*/
+.registerbtn{
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+h3{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+/* sticky */
+.quote-container{
+	margin-top: 50px;
+	position: relative;
+}
+.note{
+	color: #333;
+	position: relative;
+	width: 300px;
+	margin: 100px 0 0 40px;
+	padding: 20px;
+	font-family: 'Nanum Pen Script', cursive;
+	font-size: 35px;
+	box-shadow: 0 10px 10px 2px rgba(0,0,0,0.3);
+}
+.note .author{
+	display: block;
+	margin: 40px 0 0 0;
+	text-align: right;
+}
+.yellow{
+	background: #eae672;
+	-webkit-transform: rotate(2deg);
+	-moz-transform: rotate(2deg);
+	-o-transform: rotate(2deg);
+	-ms-transform: rotate(2deg);
+	transform: rotate(2deg);
+
+}
+.pin{
+	background-color: #aaa;
+	display: block;
+	height: 32px;
+	width: 2px;
+	position: absolute;
+	left: 190px;
+	top: -16px;
+	z-index: 1;
+}
+.pin:after{
+	background-color: #A31;
+	background-image: radial-gradient(25% 25%, circle, hsla(0,0%,100%,.3), hsla(0,0%,0%,.3));
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.1),
+	inset 3px 3px 3px hsla(0,0%,100%,.2),
+	inset -3px -3px 3px hsla(0,0%,0%,.2),
+	23px 20px 3px hsla(0,0%,0%,.15);
+	content: '';
+	height: 12px;
+	left: -5px;
+	position: absolute;
+	top: -10px;
+	width: 12px;
+
+}
+
+.pin:before {
+  background-color: hsla(0,0%,0%,0.1);
+  box-shadow: 0 0 .25em hsla(0,0%,0%,.1);
+  content: '';
+  height: 24px;
+  width: 2px;
+  left: 0;
+  position: absolute;
+  top: 8px;
+  transform: rotate(57.5deg);
+  -moz-transform: rotate(57.5deg);
+  -webkit-transform: rotate(57.5deg);
+  -o-transform: rotate(57.5deg);
+  -ms-transform: rotate(57.5deg);
+  transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+
+}
+
+#moveeasy{
+    height: 500px;
+}
+
+#mid{
+    height: 250px;
+}

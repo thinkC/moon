@@ -1,0 +1,48 @@
+<% include ./partials/header %>
+<div class="container">
+<h1 class="text-center" style="margin-top:70px;">Sign Up</h1>
+<div style="width : 30%; margin:25px auto">
+<!--<form action="/register" method="post">-->
+<form action="/register" method="post">
+    <div class="form-group">
+    <input class="form-control" type="text" name="username" id="username" placeholder="username" pattern="[a-z]{4,15}" title="username should only contain lowercase letters and minimum of 4 character. e.g. john">
+    </div>
+    <div class="form-group">
+    <input class="form-control" type="email" name="email" id="email" placeholder="email" >
+    </div>
+     <div class="form-group">
+    <input class="form-control" type="password" name="password" id="password" placeholder="password" pattern="[a-zA-Z]{5,}" title="The string must be five characters or longer.No numbers allowed">
+    </div>
+    <div class="form-group">
+    <input class="form-control" type="text" name="firstName" id="firstname"  placeholder="firstName" title="FirstName should only contain UPPERCASE letters and minimum of 3 character. e.g. JOHN">
+    </div>
+    <div class="form-group">
+    <input class="form-control" type="text" name="lastName" id="firstname"  placeholder="lastName" title="LastName should only contain UPPERCASE letters and minimum of 3 character. e.g. JOHN">
+    </div>
+    <div class="form-group">
+    <input class="form-control" type="tel" name="phone" id="phone" pattern="^\d{11}$" placeholder="phone number" title="Phone number should only contain digits. e.g. 08032346764">
+    </div>
+    <div class="form-group">
+    <input class="form-control" type="text" name="locations" placeholder="location e.g Ogba">
+    </div>
+    <div class="form-group">
+    <input class="form-control" type="text" name="bus_stop" placeholder="Nearest Bus Stop">
+    </div>
+    <div class="form-group">
+    <!--<input class="form-control" id="pickupTime" type="time" name="pickupTime" placeholder="pick up time">-->
+    <input class="form-control" id="pickupTime" type="Number" name="pickupTime" placeholder="pick up time">
+    </div>
+     <div class="form-group">
+                    <select name="gender">
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                <textarea class="form-control" name="comment" id="" cols="30" rows="10"></textarea>
+                </div>
+    <button class="btn btn-lg btn-primary btn-block">Sign Up</button>
+</form>
+</div>
+</div>
+<% include ./partials/footer %>
