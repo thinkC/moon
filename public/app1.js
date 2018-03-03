@@ -111,17 +111,18 @@ $(function(){
 //     $("#test").scrollTop(0).fadeOut();
 // })
 
+//remove nar bar scrolling effect
 
-$( window ).on("scroll", function(){
-    //$("#test").fadeIn(2000);
-    if($( window ).scrollTop() === 0 && window.matchMedia('(max-width: 750px)')){
-        $("#test").fadeOut(2000);
-    } else if(window.matchMedia('(max-width: 568px)')){
-        $("#test").show();
-    }
+// $( window ).on("scroll", function(){
+//     //$("#test").fadeIn(2000);
+//     if($( window ).scrollTop() === 0 && window.matchMedia('(max-width: 750px)')){
+//         $("#test").fadeOut(2000);
+//     } else if(window.matchMedia('(max-width: 568px)')){
+//         $("#test").show();
+//     }
         
     
-})
+// })
 
 
         // if(window.matchMedia('(max-width: 480px)')){

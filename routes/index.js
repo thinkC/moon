@@ -99,7 +99,7 @@ router.post("/login",passport.authenticate("local",
     failureRedirect : "/login",
     // failureFlash: "Invalid username or password!"
     failureFlash: true,
-    successFlash: 'Welcome to T4Solutions!'
+    //successFlash: 'Welcome to T4Solutions!'  // disable flash
 }), function(req, res) {
     
 })
@@ -115,6 +115,20 @@ router.get("/logout", function(req, res) {
 
 
 //Get all users from DB
+// router.get("/registeredusers",allowRegister, function(req, res) {
+//   if(req.query.search){
+//     const regex = new RegExp(escapeRegex(req.query.search), 'gi');
+//   }else{
+//     User.find({name:regex}, function(err, allRegisteredUsers){
+//       if(err){
+//         console.log(err);
+//       }else{
+//         res.render("registeredusers",{allRegisteredUsersVar:allRegisteredUsers} )
+//       }
+//     })
+//   }
+// })
+
 router.get("/registeredusers",allowRegister, function(req, res) {
     User.find({}, function(err, allRegisteredUsers){
       if(err){
@@ -123,7 +137,9 @@ router.get("/registeredusers",allowRegister, function(req, res) {
         res.render("registeredusers",{allRegisteredUsersVar:allRegisteredUsers} )
       }
     })
+  
 })
+
 
 //show more info on each Registered User
 router.get("/register/:id", function(req, res) {
@@ -365,11 +381,16 @@ router.post('/reset/:token', function(req, res) {
 
 //middleware
 function allowRegister(req, res, next){
-    if(req.isAuthenticated() && req.user._id == "5a99b940f4dea027831887dd"){
+    if(req.isAuthenticated() && req.user._id == "5a99b940f4dea027831887dd" || req.isAuthenticated() && req.user._id =="5a93c16ab8016d0c30e0a883"){
         return next();
     }
     req.flash("error", "Please login First");
     res.redirect("/login");
 }
+
+
+function escapeRegex(text) {
+    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+};
 
 module.exports = router;

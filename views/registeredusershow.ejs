@@ -11,11 +11,12 @@
        <h4><%= foundUsersVar["bus_stop"]%></h4>
        <h4><%= foundUsersVar["pickupTime"]%></h4>
        <h4><%= foundUsersVar["comment"]%></h4>
+       <% if(currentUser && currentUser._id == "5a99b940f4dea027831887dd" || currentUser && currentUser._id == "5a93c16ab8016d0c30e0a883"){ %>
        <a class="btn btn-warning btn-xs" href="/register/<%=foundUsersVar._id%>/edit">Edit</a>
        <form style="display: inline" action="/register/<%= foundUsersVar._id %>?_method=DELETE" method="POST">
                         <button class="btn btn-danger btn-xs">Delete</button>
                 </form>
-
+        <% } %>
 </div>
 <% include ./partials/footer %>
 

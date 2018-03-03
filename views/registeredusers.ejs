@@ -1,7 +1,19 @@
 <% include ./partials/header %>
 <div class="container">
+ <div class="row">
+ <div class="col-md-6 col-sm-6">
+  
 <h1 style="text-align: center;  margin-top:60px;">Registered Users</h1>
 <!--<%= allRegisteredUsersVar %>-->
+
+<!--search registered users-->
+<form action="/registeredusers" method="GET" class="form-inline">
+<div class="form-group">
+ <input type="text" name="search" placeholder="Search Users..." class="form-control">
+ <input type="submit" value="Search" class="btn btn-default"> 
+</div>
+</form>
+
 <% for(var i=0; i < allRegisteredUsersVar.length; i++){ %>
     <h4><%= allRegisteredUsersVar[i]["firstName"]%> - <%= allRegisteredUsersVar[i]["lastName"] %></h4>
     <h4><%= allRegisteredUsersVar[i]["username"]%></h4>
@@ -17,5 +29,11 @@
     </p>
        <hr>
 <% } %>
+</div>
+<div style="margin-top:110px;" class="col-md-6 col-sm-6">
+ <button class="btn btn-default" onclick="HTMLtoPDF()">Download PDF</button>
+</div>
+
+</div>
 </div>
 <% include ./partials/footer %>
