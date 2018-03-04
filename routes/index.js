@@ -22,7 +22,7 @@ router.get("/register", function(req, res){
 });
 
 
-//new code for this
+//sigup/register new user
 router.post("/register", function(req, res){
     var newUser = new User({
         username: req.body.username,
@@ -99,7 +99,7 @@ router.post("/login",passport.authenticate("local",
     failureRedirect : "/login",
     // failureFlash: "Invalid username or password!"
     failureFlash: true,
-    //successFlash: 'Welcome to T4Solutions!'  // disable flash
+    successFlash: 'Welcome to T4Solutions!'  
 }), function(req, res) {
     
 })
@@ -115,29 +115,25 @@ router.get("/logout", function(req, res) {
 
 
 //Get all users from DB
-// router.get("/registeredusers",allowRegister, function(req, res) {
-//   if(req.query.search){
-//     const regex = new RegExp(escapeRegex(req.query.search), 'gi');
-//   }else{
-//     User.find({name:regex}, function(err, allRegisteredUsers){
-//       if(err){
-//         console.log(err);
-//       }else{
-//         res.render("registeredusers",{allRegisteredUsersVar:allRegisteredUsers} )
-//       }
-//     })
-//   }
-// })
-
 router.get("/registeredusers",allowRegister, function(req, res) {
-    User.find({}, function(err, allRegisteredUsers){
+  if(req.query.search){
+     const regex = new RegExp(escapeRegex(req.query.search), 'gi');
+    User.find({locations : regex}, function(err, allRegisteredUsers){
       if(err){
         console.log(err);
       }else{
         res.render("registeredusers",{allRegisteredUsersVar:allRegisteredUsers} )
       }
     })
-  
+  }else{
+    User.find({}, function(err, allRegisteredUsers){
+      if(err){
+        console.log(err);
+      }else{
+        res.render("registeredusers",{allRegisteredUsersVar:allRegisteredUsers} );
+      }
+    })
+  }
 })
 
 

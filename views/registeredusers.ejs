@@ -25,7 +25,9 @@
        <h4><%= allRegisteredUsersVar[i]["pickupTime"]%></h4>
        <h4><%= allRegisteredUsersVar[i]["comment"]%></h4>
         <p>
+        <%if(currentUser && currentUser._id == "5a99b940f4dea027831887dd" || currentUser && currentUser._id == "5a93c16ab8016d0c30e0a883"){%>
         <a href="/register/<%=allRegisteredUsersVar[i]._id%>" class="btn btn-primary">More Info</a>
+       <% } %>
     </p>
        <hr>
 <% } %>

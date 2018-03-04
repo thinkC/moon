@@ -27,6 +27,7 @@ app.use(flash());
 app.use(methodOverride("_method"));
 
 var url = process.env.DATABASEURL || "mongodb://localhost/t4solutionsnewa";
+//var url = process.env.DATABASEURL || "mongodb://localhost/t4solutions2";
 mongoose.connect(url);
 
 //PASSPORT CONFIGURATION
